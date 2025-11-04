@@ -1,0 +1,8 @@
+# OS files
+.DS_Store
+
+# Personal directory
+ITA/
+
+# Other
+.obsidian/
