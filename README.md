@@ -2,7 +2,7 @@
 
 Complete backup solution using **Restic** and **Rclone** for encrypted, deduplicated backups across multiple cloud providers.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── Assets/
