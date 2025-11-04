@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Job identification name -->
+    <key>Label</key>
+    <string>com.user.restic-backup</string>
+
+    <!-- Command to execute -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>/Users/<your-username>/.local/share/restic-backup/Scripts/backup-desktop.sh &amp;&amp; /Users/<your-username>/.local/share/restic-backup/Scripts/verify-repositories.sh</string>
+    </array>
+
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <!-- When to run it: every day at 11:30 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>11</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <!-- Standard output log -->
+    <key>StandardOutPath</key>
+    <string>/Users/<your-username>/.local/share/restic-backup/logs/launchd-stdout.log</string>
+
+    <!-- Error log -->
+    <key>StandardErrorPath</key>
+    <string>/Users/<your-username>/.local/share/restic-backup/logs/launchd-stderr.log</string>
+
+    <!-- Also run at boot if it was scheduled time -->
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+
