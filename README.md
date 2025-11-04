@@ -18,8 +18,8 @@ Complete backup solution using **Restic** and **Rclone** for encrypted, deduplic
 
 ## Quick Start
 
-1. **Setup**: Read [`ENG_Backup_Guide_Restic+Rclone.pdf`](Markdown_Files/ENG_Backup_Guide_Restic+Rclone.pdf)
-3. **Recovery**: Follow [`ENG_Disaster_Recovery_Guide.pdf`](Markdown_Files/ENG_Disaster_Recovery_Guide.pdf) if needed
+1. **Setup**: Read [`ENG_Backup_Guide_Restic+Rclone.pdf`](Pdf_files/ENG_Backup_Guide_Restic+Rclone.pdf)
+3. **Recovery**: Follow [`ENG_Disaster_Recovery_Guide.pdf`](Pdf_files/ENG_Disaster_Recovery_Guide.pdf) if needed
 
 ## What This System Does
 
@@ -44,3 +44,4 @@ All guides are available in both Markdown and PDF format:
 - Homebrew
 - Google Drive accounts (I use 3 × 15GB but you can use more)
 - MEGA accounts (I use 2 × 20GB but you can use more)
+
