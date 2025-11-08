@@ -21,6 +21,21 @@ Complete backup solution using **Restic** and **Rclone** for encrypted, deduplic
 1. **Setup**: Read [`ENG_Backup_Guide_Restic+Rclone.pdf`](Pdf_Files/ENG_Backup_Guide_Restic+Rclone.pdf)
 3. **Recovery**: Follow [`ENG_Disaster_Recovery_Guide.pdf`](Pdf_Files/ENG_Disaster_Recovery_Guide.pdf) if needed
 
+⚠️ CRITICAL WARNING - MEGA Storage Bonuses
+DO **NOT** accept MEGA's temporary storage bonuses (e.g., +5GB for 365 days)!
+If you accept temporary storage bonuses and use that space for backups, your repositories will become corrupted when the bonus expires and MEGA reduces your available space. This can lead to data loss.
+If You Already Accepted Bonuses
+If you've already accepted temporary storage bonuses but haven't used them yet, you can prevent issues by configuring rclone to leave a safety buffer:
+
+```bash
+# Configure MEGA remotes with min_free_space parameter
+rclone config update mega1 min_free_space 5.5G
+rclone config update mega2 min_free_space 5.5G
+```
+
+This ensures rclone won't use the temporary bonus space, preventing corruption when it expires.
+Recommendation: Only use permanent, base storage allocations for critical backups.
+
 ## What This System Does
 
 - **Encrypts** all data client-side before upload
